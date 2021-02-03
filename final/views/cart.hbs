@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<DOCTYPE html>
+<html lang="en">
+<head>
+<title>Wish</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="Wish shop project">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/stylesheets/cart/cart.css">
+</head>
+<body>
+    <header id="site-header">
+        <div class="container">
+            <h1>Shopping cart <span></span></h1>
+        </div>
+    </header>
+
+    <div class="container">
+        {{#each products }}
+        <section id="cart"> 
+            <article class="product">
+                
+                <header>
+                    <a class="remove">
+                        <img src="{{this.item.imagePath}}" alt="">
+
+                        
+                    </a>
+                </header>
+
+                <div class="content">
+
+                    <h1>{{ this.item.title }}</h1>
+                </div>
+
+                <footer class="content">
+                    <span class="qt-minus"> Total Quantity</span>
+                    <span class="qt">{{ this.qty}}</span>
+                    
+
+                    <h2 class="full-price">
+                       Rs.{{this.price}}
+                    </h2>
+
+                    <h2 class="price">
+                       
+                    </h2>
+                </footer>
+            </article>
+        </section>
+        {{/each}}
+    </div>
+
+    <footer id="site-footer">
+        <div class="container clearfix">
+
+            <div class="right">
+                <h1 class="total">Total: <span>{{totalPrice}}</span></h1>
+                <a class="btn" href="\check">Checkout</a>
+            </div>
+
+        </div>
+    </footer>
+   </body> 

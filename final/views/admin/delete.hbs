@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Edit</title>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+  
+      <link rel="stylesheet" href="/stylesheets/admin/css/style.css">
+
+  
+</head>
+
+<body>
+  <section>
+  <!--for demo wrap-->
+  <h1>Edit</h1>
+  <div class="tbl-header">
+    <table cellpadding="0" cellspacing="4" border="0">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Description</th>
+          <th>Price</th>
+          <th>Delete</th>
+          <th>Update</th>
+
+        </tr>
+      </thead>
+    </table>
+  </div>
+  <div class="tbl-content">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <tbody>
+        {{# each products}}
+        <tr>
+          <td>{{this.title}} </td>
+          <td>{{this.description}}</td>
+          <td>{{this.price}}</td>
+      <td>  
+     <a href='/admin/delete/{{this._id}}'> 
+     <input type="button" value="Delete" name="B3" >
+   </a>
+    </td>
+    <td>
+     <a href='/admin/update/{{this._id}}'> 
+     <input type="button" value="Update" name="B3" >
+   </a>
+    </td>
+{{/each}}    
+  </tr>
+ 
+  </table>
+</body>
+
+

@@ -1,0 +1,56 @@
+<title>Sign Up Form by Colorlib</title>
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="/stylesheets/formcss/fonts/material-icon/css/material-design-iconic-font.min.css">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="/stylesheets/formcss/style.css">
+</head>
+<body>
+
+    <div class="main">
+
+        <section class="signup">
+            <!-- <img src="images/signup-bg.jpg" alt=""> -->
+            <div class="container">
+    
+                <div class="signup-content">
+            {{#if hasErrors}}
+            <div class="alert alert-danger">
+                {{# each messages }}
+                    <p>{{this}}</p>
+                {{/each}}
+            </div>
+        {{/if}}
+                    <form method="POST" id="signup-form" class="signup-form"action="/users/reset">
+                        <h2 class="form-title">RESET</h2>
+              
+                        <div class="form-group">
+                            <input type="email" class="form-input" name="email" id="email" placeholder="Your Email"/>
+                        </div>
+                       
+                        
+                        <div class="form-group">
+                            <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
+                            <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree all statements in  <a href="#" class="term-service">Terms of service</a></label>
+                        </div>
+                        <li>
+                      <input type="hidden" name="_csrf" value="{{ csrfToken }}">
+                      </li>
+                        <div class="form-group">
+                            <input type="submit" name="submit" id="submit" class="form-submit" value="RESET"/>
+                        </div>
+                    </form>
+                    
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- JS -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="/js/formjsjs/main.js"></script>
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>
+            

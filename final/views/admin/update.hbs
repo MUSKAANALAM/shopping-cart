@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Contact V10</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/adminform.css">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/adminform2.css">
+<!--===============================================================================================-->
+</head>
+<body>
+
+
+  <div class="container-contact100">
+
+    <div class="wrap-contact100">
+      <form class="contact100-form validate-form" action="/admin/update/{{ product }}" enctype="multipart/form-data" method="post">
+        <span class="contact100-form-title">
+          Update a Product
+        </span>
+
+        <div class="wrap-input100 validate-input" data-validate="Please enter your name">
+          <input class="input100" type="text" name="title" placeholder="Title">
+          <span class="focus-input100"></span>
+        </div>
+
+        <div class="wrap-input100 validate-input" data-validate = "Please enter your email: e@a.x">
+          <label for="img">Upload image of the product</label>
+          <input  type="file" id="image" name="image" placeholder="image">
+          </div>
+
+        <div class="wrap-input100 validate-input" data-validate = "Please enter your phone">
+          <input class="input100" type="text" name="price" placeholder="Price">
+          <span class="focus-input100"></span>
+        </div>
+
+        <div class="wrap-input100 validate-input" data-validate = "Please enter your message">
+          <textarea class="input100" name="description" placeholder="Description"></textarea>
+          <span class="focus-input100"></span>
+        </div>
+        <div class="wrap-input100 validate-input" data-validate = "Please enter your message">
+          <input type="hidden" name="_csrf" value="{{ csrfToken }}"></textarea>
+          
+        </div>
+
+
+        <div class="container-contact100-form-btn">
+          <button class="contact100-form-btn">
+            <span>
+              <i class="fa fa-paper-plane-o m-r-6" aria-hidden="true"></i>
+              Update
+            </span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+
+  
+
+</body>
+</html>
+            
